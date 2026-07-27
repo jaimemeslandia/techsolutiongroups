@@ -49,9 +49,9 @@
             required
     >
 
-    
+
   <button type="submit">Actualizar Proyecto</button>
 
-    
+
     </form>
 </x-layout>

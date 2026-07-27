@@ -29,7 +29,7 @@ class ProyectosController extends Controller
     }
 
     public function creaProyectos(Request $request){
-        #ESTE SI CREA LOS PROYECTOS 
+        #ESTE SI CREA LOS PROYECTOS
          $validado = $request->validate([
             'Nombre' => 'required|string|max:255',
             'Fecha_de_inicio' => 'required|date',
@@ -49,7 +49,7 @@ class ProyectosController extends Controller
     }
 
     public function actualizarProyectos(Proyectos $proyecto, Request $request){
-        
+
         $validado = $request->validate([
             'Nombre' => 'required|string|max:255',
             'Fecha_de_inicio' => 'required|date',
