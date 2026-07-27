@@ -1,6 +1,6 @@
 <x-layout>
     <div class="bg-white shadow-md rounded-xl p-8 text-center max-w-lg mx-auto">
-        <h1 class="text-2xl font-bold mb-4">BORRAR PROYECTO</h1>
+        <h1 class="text-2xl font-bold mb-4">BORRAR PROYECTOS!</h1>
         <h3 class="text-lg font-semibold mb-2">Se borrará el siguiente proyecto!!</h3>
         <p class="text-slate-600 font-medium mb-1">Nombre: <span class="text-slate-900 p-2">{{$proyecto->Nombre}}</span></p>
         <p class="text-slate-600 font-medium mb-1">Fecha de Inicio: <span class="text-slate-900 p-2">{{$proyecto->Fecha_de_inicio}}</span></p>

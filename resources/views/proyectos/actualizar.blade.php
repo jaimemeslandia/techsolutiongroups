@@ -3,7 +3,7 @@
     class="bg-white shadow-md rounded-xl p-8 flex flex-col gap-4 max-w-lg mx-auto">
     @csrf
     @method('PUT')
-    <h1 class="text-2xl font-bold mb-6 text-slate-800 text-center">ACTUALIZAR PROYECTO</h1>
+    <h1 class="text-2xl font-bold mb-6 text-slate-800 text-center">ACTUALIZAR PROYECTOS!</h1>
 
     <div>
         <label for="Nombre" class="text-sm font-semibold text-slate-700">Nombre del Proyecto:</label>
