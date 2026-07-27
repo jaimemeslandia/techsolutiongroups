@@ -14,7 +14,7 @@
     
     <header>
         <nav class="flex flex-wrap items-center justify-between gap-4 px-8 py-6">
-            <h1 class="text-slate-800 text-lg font-bold">Proyectos Ficticios! Evaluacion 1!!!</h1>
+            <h1 class="text-slate-800 text-lg font-bold">TechSolution Group</h1>
             <div class="flex rounded-lg shadow-md text-center items-center justify-center gap-6 py-2 px-4 bg-linear-to-tr from-yellow-300 to-red-300">
                 <a href="{{ route('proyectos.index')}}">Inicio!</a>
                 <a href="{{ route('proyectos.lista')}}">Todos los proyectos!</a>
