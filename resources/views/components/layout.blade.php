@@ -18,6 +18,7 @@
             <a href="{{ route('proyectos.index')}}">Inicio!</a>
             <a href="{{ route('proyectos.lista')}}">Todos los proyectos!</a>
             <a href="{{route('proyectos.crear')}}">Crea un proyecto!</a>
+            <x-api-uf></x-api-uf>
         </nav>
     </header>
 
