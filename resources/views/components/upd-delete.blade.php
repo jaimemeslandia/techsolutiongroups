@@ -1,6 +1,6 @@
 
-<div class="flex gap-3 mt-4">
-    <ul>
+<div class="mt-4">
+    <ul class="flex flex-wrap gap-4 justify-center">
         <li>
             <a href="{{route("proyectos.actualizar", $attributes->get('id'))}}" 
                 class="inline-block px-3 py-2 rounded-md
