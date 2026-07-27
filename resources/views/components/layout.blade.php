@@ -6,6 +6,11 @@
      @vite('resources/css/app.css')
 </head>
 <body>
+    @if(session('success'))
+        <div>
+            {{session('success')}}
+        </div>
+    @endif
     
     <header>
         <nav>

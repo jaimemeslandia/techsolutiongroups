@@ -17,6 +17,9 @@ Route::get('/lista', [ProyectosController::class, 'lista'])->name('proyectos.lis
 
 Route::get('/lista/{id}', [ProyectosController::class, 'proyecto'])->name('proyectos.proyecto');
 
+Route::post('/proyectos', [ProyectosController::class, 'creaProyectos'])->name('proyectos.creaProyectos');
+
+Route::delete('/lista/{id}', [ProyectosController::class, 'borrarProyectos'])->name('proyectos.borrarProyectos');
 
 
 

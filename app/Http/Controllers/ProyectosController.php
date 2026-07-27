@@ -12,7 +12,7 @@ class ProyectosController extends Controller
     }
 
     public function lista(){
-        $proyectos = Proyectos::orderBy('created_at', 'desc')->paginate(5);
+        $proyectos = Proyectos::orderBy('id', 'desc')->paginate(5);
         return view('proyectos.lista', ['proyectos' => $proyectos]);
     }
 
@@ -24,7 +24,23 @@ class ProyectosController extends Controller
     }
 
     public function crear(){
+        #RETORNA LA VISTA EN DONDE SE CREARAN LOS PROYECTOS
         return view('proyectos.crear');
+    }
+
+    public function creaProyectos(Request $request){
+        #ESTE SI CREA LOS PROYECTOS 
+         $validado = $request->validate([
+            'Nombre' => 'required|string|max:255',
+            'Fecha_de_inicio' => 'required|date',
+            'Estado' => 'required|string|max:255',
+            'Responsable' => 'required|string|max:255',
+            'Monto' => 'required|integer|min:0',
+         ]);
+
+         Proyectos::create($validado);
+
+         return redirect()->route('proyectos.lista')->with('success','Proyecto Creado');
     }
 
     public function actualizar($id){
@@ -35,6 +51,13 @@ class ProyectosController extends Controller
     public function borrar($id){
         $proyecto = Proyectos::findOrFail($id);
         return view('proyectos.borrar', ["proyecto"=>$proyecto]);
+    }
+
+    public function borrarProyectos($id){
+        $proyecto = Proyectos::findOrFail($id);
+        $proyecto->delete();
+
+        return redirect()->route('proyectos.lista')->with('success', 'Proyecto Borrado');
     }
 
 }
