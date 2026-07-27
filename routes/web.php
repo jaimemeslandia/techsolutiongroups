@@ -21,6 +21,8 @@ Route::post('/proyectos', [ProyectosController::class, 'creaProyectos'])->name('
 
 Route::delete('/lista/{id}', [ProyectosController::class, 'borrarProyectos'])->name('proyectos.borrarProyectos');
 
+Route::put('/actualizar/{proyecto}', [ProyectosController::class, 'actualizarProyectos'])->name('proyectos.actualizarProyectos');
+
 
 
 
