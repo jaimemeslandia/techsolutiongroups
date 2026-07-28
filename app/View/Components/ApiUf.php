@@ -22,10 +22,14 @@ class ApiUf extends Component
         $idCache = 'uf-del-dia-' . now()->toDateString();
 
         $respuestaUf = Cache::remember($idCache, now()->endOfDay(), function () {
-        $consulta = Http::timeout(5)->get('https://indicadoreconomico.cl/api/uf');
+        try {
+            $consulta = Http::withoutVerifying()->timeout(5)->get('https://indicadoreconomico.cl/api/uf');
 
-        if ($consulta->successful()) {
-            return $consulta->json();
+            if ($consulta->successful()) {
+                return $consulta->json();
+            }
+        } catch (\Throwable $e) {
+            // no se pudo conectar a la api
         }
 
         return null;
