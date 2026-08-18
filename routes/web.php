@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProyectosController;
+use App\Http\Controllers\AuthController;
+
+Route::get('/registro', [AuthController::class, 'showRegister'])->name('auth.showRegister');
+Route::post('/registro', [AuthController::class, 'register'])->name('auth.register');
 
 Route::get('/', [ProyectosController::class, 'index'])->name('proyectos.index');
 
@@ -22,8 +26,3 @@ Route::post('/proyectos', [ProyectosController::class, 'creaProyectos'])->name('
 Route::delete('/lista/{id}', [ProyectosController::class, 'borrarProyectos'])->name('proyectos.borrarProyectos');
 
 Route::put('/actualizar/{proyecto}', [ProyectosController::class, 'actualizarProyectos'])->name('proyectos.actualizarProyectos');
-
-
-
-
-
