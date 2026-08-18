@@ -61,8 +61,7 @@
     hover:from-yellow-500 hover:to-red-600">Registrarme</button>
 
     <p class="text-sm text-slate-600 text-center">
-        {{-- TODO: la ruta con nombre auth.showLogin todavia no existe, se agrega en el siguiente paso (login) --}}
-        Ya tienes cuenta? <a href="/login" class="text-blue-600 hover:underline">Inicia sesion</a>
+        Ya tienes cuenta? <a href="{{ route('auth.showLogin') }}" class="text-blue-600 hover:underline">Inicia sesion</a>
     </p>
     </form>
 </x-layout>

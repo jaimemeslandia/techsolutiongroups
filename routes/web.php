@@ -7,6 +7,10 @@ use App\Http\Controllers\AuthController;
 Route::get('/registro', [AuthController::class, 'showRegister'])->name('auth.showRegister');
 Route::post('/registro', [AuthController::class, 'register'])->name('auth.register');
 
+Route::get('/login', [AuthController::class, 'showLogin'])->name('auth.showLogin');
+Route::post('/login', [AuthController::class, 'login'])->name('auth.login');
+Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
+
 Route::get('/', [ProyectosController::class, 'index'])->name('proyectos.index');
 
 Route::get('/proyectos', [ProyectosController::class, 'index'])->name('proyectos.index');
