@@ -7,7 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Proyectos extends Model
 {
-    protected   $fillable = ['Nombre', 'Fecha_de_inicio', 'Estado', 'Responsable', 'Monto'];
+    protected   $fillable = ['Nombre', 'Fecha_de_inicio', 'Estado', 'Responsable', 'Monto', 'created_by'];
     /** @use HasFactory<\Database\Factories\ProyectosFactory> */
     use HasFactory;
+
+    public function creador()
+    {
+        return $this->belongsTo(User::class, 'created_by');
+    }
 }
