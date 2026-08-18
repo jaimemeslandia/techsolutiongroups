@@ -38,6 +38,8 @@ class ProyectosController extends Controller
             'Monto' => 'required|integer|min:0',
          ]);
 
+         $validado['created_by'] = $request->attributes->get('auth_user_id');
+
          Proyectos::create($validado);
 
          return redirect()->route('proyectos.lista')->with('success','Proyecto Creado');
